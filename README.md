@@ -1,7 +1,13 @@
 # Ogg_Wav_Convertor
 Convert ogg compressed audio file into Wav formate using NAudio and NVorbis
 
-# WAV Header
+## NVorbis
+NVorbis is a .Net library for decoding Xiph.org Vorbis files. It is built for .Net Standard 7.0 and .Net Framework 4.8
+https://github.com/nothings/stb/blob/master/stb_vorbis.c.
+NVorbis can be downloaded on https://www.nuget.org/packages/NVorbis/
+
+## WAV Header
+```
 [Master RIFF chunk]
    FileTypeBlocID  (4 bytes) : Identifier « RIFF »  (0x52, 0x49, 0x46, 0x46)
    FileSize        (4 bytes) : Overall file size minus 8 bytes
@@ -21,4 +27,7 @@ Convert ogg compressed audio file into Wav formate using NAudio and NVorbis
    DataBlocID      (4 bytes) : Identifier « data »  (0x64, 0x61, 0x74, 0x61)
    DataSize        (4 bytes) : SampledData size
    SampledData
+```
+https://en.wikipedia.org/wiki/WAV#:~:text=Waveform%20Audio%20File%20Format%20(WAVE,1991%20by%20IBM%20and%20Microsoft.
 
+It is designed to run in partial trust environments and does not require P/Invoke or unsafe code.
